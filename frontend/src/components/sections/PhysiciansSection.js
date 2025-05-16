@@ -24,7 +24,7 @@ const PhysiciansSection = () => {
       specialty: 'Cardiology',
       experience: '20+ years experience',
       education: 'Johns Hopkins University',
-      testimonial: 'Following my heart surgery, Dr. Wilson's careful monitoring and personalized care plan helped me recover faster than expected.',
+      testimonial: 'Following my heart surgery, Dr. Wilson\'s careful monitoring and personalized care plan helped me recover faster than expected.',
       patientName: 'Rebecca M.',
       rating: 5
     },
