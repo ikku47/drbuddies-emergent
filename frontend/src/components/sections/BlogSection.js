@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaCalendarAlt, FaUserMd } from 'react-icons/fa';
 
@@ -70,7 +71,7 @@ const BlogSection = () => {
           </p>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -78,19 +79,19 @@ const BlogSection = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {articles.map((article) => (
-            <motion.div 
+            <motion.div
               key={article.id}
               variants={itemVariants}
               className="bg-white rounded-xl shadow-soft overflow-hidden feature-card"
             >
               <div className="h-52 overflow-hidden">
-                <img 
-                  src={article.image} 
-                  alt={article.title} 
+                <img
+                  src={article.image}
+                  alt={article.title}
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out"
                 />
               </div>
-              
+
               <div className="p-6">
                 <div className="mb-4 flex items-center justify-between">
                   <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-1 rounded-full">
@@ -101,10 +102,10 @@ const BlogSection = () => {
                     {article.date}
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-semibold mb-3">{article.title}</h3>
                 <p className="text-neutral-600 mb-4">{article.excerpt}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <FaUserMd className="text-primary-500 mr-2" />
@@ -116,25 +117,25 @@ const BlogSection = () => {
                   <span className="text-xs text-neutral-500">{article.readTime}</span>
                 </div>
               </div>
-              
+
               <div className="border-t border-neutral-100 p-4">
-                <a 
-                  href={`#article-${article.id}`}
+                <Link
+                  to={`/blog/heart-health`}
                   className="text-primary-600 hover:text-primary-700 font-medium flex items-center transition-colors duration-300"
                 >
-                  Read Full Article 
+                  Read Full Article
                   <FaArrowRight className="ml-2 text-sm" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
         <div className="text-center mt-12">
-          <a href="#blog-archive" className="btn-secondary inline-flex items-center">
+          <Link to="/blog" className="btn-secondary inline-flex items-center">
             View All Articles
             <FaArrowRight className="ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

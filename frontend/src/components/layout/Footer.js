@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
 
 const Footer = () => {
@@ -36,40 +37,40 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Our Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#physicians" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/physicians" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Our Physicians
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#process" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/#process" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Patient Journey
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#resources" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/#resources" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Patient Resources
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#blog" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/blog" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Health Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faqs" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/#faqs" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,40 +80,40 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#primary-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/primary-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Primary Care
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#specialized-treatments" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/specialized-treatments" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Specialized Treatments
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#emergency-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/emergency-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Emergency Care
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#diagnostics" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/diagnostics" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Advanced Diagnostics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#preventive-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/preventive-care" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Preventive Care
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#telehealth" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
+                <Link to="/services/telehealth" className="text-neutral-300 hover:text-primary-400 transition duration-300 flex items-center">
                   <FaArrowRight className="mr-2 text-xs text-primary-500" />
                   Telehealth Services
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -140,10 +141,10 @@ const Footer = () => {
               </li>
             </ul>
             <div className="mt-6">
-              <a href="#schedule" className="btn-primary inline-flex items-center">
+              <Link to="/#schedule" className="btn-primary inline-flex items-center">
                 Schedule Appointment
                 <FaArrowRight className="ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -156,15 +157,15 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} DrBuddies Medical Center. All Rights Reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
+            <Link to="/privacy" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
               Privacy Policy
-            </a>
-            <a href="#" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
+            </Link>
+            <Link to="/terms" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
               Terms of Service
-            </a>
-            <a href="#" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
+            </Link>
+            <Link to="/sitemap" className="text-neutral-400 hover:text-primary-400 text-sm transition duration-300">
               Sitemap
-            </a>
+            </Link>
           </div>
         </div>
       </div>

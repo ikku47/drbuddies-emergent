@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll } from "framer-motion";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Layout Components
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import Layout from "./components/layout/Layout";
 
-// Section Components
-import HeroSection from "./components/sections/HeroSection";
-import ServicesSection from "./components/sections/ServicesSection";
-import PhysiciansSection from "./components/sections/PhysiciansSection";
-import ProcessSection from "./components/sections/ProcessSection";
-import ResourcesSection from "./components/sections/ResourcesSection";
-import CommunitySection from "./components/sections/CommunitySection";
-import BlogSection from "./components/sections/BlogSection";
-import ScheduleSection from "./components/sections/ScheduleSection";
-import FAQSection from "./components/sections/FAQSection";
-import CTASection from "./components/sections/CTASection";
+// Page Components
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Physicians from "./pages/Physicians";
 
 function App() {
-  const { scrollYProgress } = useScroll();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -41,28 +35,16 @@ function App() {
         </div>
       )}
 
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-
-      <Navbar />
-      
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <PhysiciansSection />
-        <ProcessSection />
-        <ResourcesSection />
-        <CommunitySection />
-        <BlogSection />
-        <FAQSection />
-        <ScheduleSection />
-        <CTASection />
-      </main>
-      
-      <Footer />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:articleId" element={<BlogArticle />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetail />} />
+          <Route path="/physicians" element={<Physicians />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
