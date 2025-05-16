@@ -1,8 +1,4 @@
-import React from 'react';
-
-// Layout Components
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
+import React, { useEffect } from 'react';
 
 // Section Components
 import HeroSection from '../components/sections/HeroSection';
@@ -17,21 +13,24 @@ import ScheduleSection from '../components/sections/ScheduleSection';
 import CTASection from '../components/sections/CTASection';
 
 const Home = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <>
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <PhysiciansSection />
-        <ProcessSection />
-        <ResourcesSection />
-        <CommunitySection />
-        <BlogSection />
-        <FAQSection />
-        <ScheduleSection />
-        <CTASection />
-      </main>
-    </>
+    <main>
+      <HeroSection />
+      <ServicesSection />
+      <PhysiciansSection />
+      <ProcessSection />
+      <ResourcesSection />
+      <CommunitySection />
+      <BlogSection />
+      <FAQSection />
+      <ScheduleSection />
+      <CTASection />
+    </main>
   );
 };
 
