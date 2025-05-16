@@ -36,7 +36,7 @@ const PhysiciansSection = () => {
       specialty: 'Pediatrics',
       experience: '12+ years experience',
       education: 'Stanford University',
-      testimonial: 'Dr. Patel has such a wonderful way with children. My son, who's normally terrified of doctors, actually looks forward to his appointments with her.',
+      testimonial: 'Dr. Patel has such a wonderful way with children. My son, who\'s normally terrified of doctors, actually looks forward to his appointments with her.',
       patientName: 'Jennifer L.',
       rating: 5
     },
