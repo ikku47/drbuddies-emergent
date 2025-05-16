@@ -1,38 +1,249 @@
-.App {
-    text-align: center;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.btn-primary {
+  @apply bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-[1.02] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-6 rounded-lg transition duration-300 border border-primary-300 hover:border-primary-400 transform hover:scale-[1.02] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50;
+}
+
+.btn-accent {
+  @apply bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-6 rounded-lg transition duration-300 transform hover:scale-[1.02] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-opacity-50;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5d3e8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3373FF;
+}
+
+/* Navigation dropdown animation */
+.nav-dropdown {
+  transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown.active {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Hero section animation */
+.hero-content h1, 
+.hero-content p, 
+.hero-content .cta-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content h1 {
+  animation-delay: 0.2s;
+}
+
+.hero-content p {
+  animation-delay: 0.4s;
+}
+
+.hero-content .cta-buttons {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline animation */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #3373FF;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.timeline-item.active::before {
+  transform: scaleY(1);
+}
+
+.timeline-dot {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.timeline-item.active .timeline-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-card .service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  color: #3373FF;
+}
+
+.service-card .hover-content {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover .hover-content {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+
+/* Doctor profile card hover */
+.doctor-card {
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.doctor-card img {
+  transition: all 0.5s ease;
+}
+
+.doctor-card:hover img {
+  transform: scale(1.05);
+}
+
+.doctor-card .doctor-info {
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover .doctor-info {
+  background-color: #3373FF;
+  color: white;
+}
+
+.doctor-card:hover .doctor-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Testimonial card hover */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-card .quote-icon {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover .quote-icon {
+  transform: rotate(180deg);
+  color: #3373FF;
+}
+
+/* Stats counter animation */
+.stat-counter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+.stat-counter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FAQ accordion animation */
+.faq-question {
+  transition: all 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 1rem 0;
+}
+
+.faq-icon {
+  transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
 }
