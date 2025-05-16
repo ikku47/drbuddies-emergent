@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section 
       className="relative min-h-screen flex items-center pt-16"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 35, 75, 0.7), rgba(0, 71, 179, 0.6)), url('https://images.unsplash.com/photo-1581056771107-24ca5f033842')`,
+        backgroundImage: `linear-gradient(rgba(0, 35, 75, 0.7), rgba(0, 71, 179, 0.6)), url('https://images.unsplash.com/photo-1579684288361-5c1a2957cc38')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
