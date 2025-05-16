@@ -236,7 +236,7 @@ const ScheduleSection = () => {
 
               <div className="bg-white rounded-xl shadow-soft overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1513128034602-7814ccaddd4e" 
+                  src="https://images.unsplash.com/photo-1586282391129-76a6df230234" 
                   alt="Medical appointment calendar" 
                   className="w-full h-auto object-cover"
                 />
