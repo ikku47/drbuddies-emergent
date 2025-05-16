@@ -24,7 +24,7 @@ const PhysiciansSection = () => {
       specialty: 'Cardiology',
       experience: '20+ years experience',
       education: 'Johns Hopkins University',
-      testimonial: 'Following my heart surgery, Dr. Wilson\'s careful monitoring and personalized care plan helped me recover faster than expected.',
+      testimonial: "Following my heart surgery, Dr. Wilson's careful monitoring and personalized care plan helped me recover faster than expected.",
       patientName: 'Rebecca M.',
       rating: 5
     },
@@ -36,7 +36,7 @@ const PhysiciansSection = () => {
       specialty: 'Pediatrics',
       experience: '12+ years experience',
       education: 'Stanford University',
-      testimonial: 'Dr. Patel has such a wonderful way with children. My son, who\'s normally terrified of doctors, actually looks forward to his appointments with her.',
+      testimonial: "Dr. Patel has such a wonderful way with children. My son, who's normally terrified of doctors, actually looks forward to his appointments with her.",
       patientName: 'Jennifer L.',
       rating: 5
     },
@@ -48,7 +48,7 @@ const PhysiciansSection = () => {
       specialty: 'Neurosurgery',
       experience: '18+ years experience',
       education: 'Yale School of Medicine',
-      testimonial: 'Dr. Kim's expertise in neurosurgery and his compassionate approach gave me confidence during an incredibly difficult time. He truly saved my life.',
+      testimonial: "Dr. Kim's expertise in neurosurgery and his compassionate approach gave me confidence during an incredibly difficult time. He truly saved my life.",
       patientName: 'Thomas B.',
       rating: 5
     }
